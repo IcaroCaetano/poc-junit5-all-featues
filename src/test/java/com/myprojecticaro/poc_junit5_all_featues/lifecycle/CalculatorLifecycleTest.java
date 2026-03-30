@@ -7,26 +7,22 @@ class CalculatorLifecycleTest {
 
     private Calculator calculator;
 
-    // Executa uma vez antes de TODOS os testes
     @BeforeAll
     static void beforeAll() {
         System.out.println(">>> Before ALL tests");
     }
 
-    // Executa antes de CADA teste
     @BeforeEach
     void setUp() {
         System.out.println(">>> Before EACH test");
         calculator = new Calculator();
     }
 
-    // Executa depois de CADA teste
     @AfterEach
     void tearDown() {
         System.out.println(">>> After EACH test");
     }
 
-    // Executa uma vez depois de TODOS os testes
     @AfterAll
     static void afterAll() {
         System.out.println(">>> After ALL tests");
