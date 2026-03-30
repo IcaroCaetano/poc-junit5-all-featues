@@ -2,30 +2,30 @@ package com.myprojecticaro.poc_junit5_all_featues.lifecycle;
 
 import org.junit.jupiter.api.*;
 
-@TestInstance(TestInstance.Lifecycle.PER_METHOD) // default
+@TestInstance(TestInstance.Lifecycle.PER_METHOD)
 class CalculatorLifecycleTest {
 
     private Calculator calculator;
 
     @BeforeAll
     static void beforeAll() {
-        System.out.println(">>> Before ALL tests");
+        System.out.println("Before ALL tests");
     }
 
     @BeforeEach
     void setUp() {
-        System.out.println(">>> Before EACH test");
+        System.out.println("Before EACH test");
         calculator = new Calculator();
     }
 
     @AfterEach
     void tearDown() {
-        System.out.println(">>> After EACH test");
+        System.out.println("After EACH test");
     }
 
     @AfterAll
     static void afterAll() {
-        System.out.println(">>> After ALL tests");
+        System.out.println("After ALL tests");
     }
 
     @Test
