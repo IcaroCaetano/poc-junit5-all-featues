@@ -2,6 +2,9 @@ package com.myprojecticaro.poc_junit5_all_featues.lifecycle;
 
 import org.junit.jupiter.api.*;
 
+
+// O JUnit cria uma nova instância da classe de teste para >> CADA método
+// Garante isolamento entre os testes.
 @TestInstance(TestInstance.Lifecycle.PER_METHOD)
 class CalculatorLifecycleTest {
 
