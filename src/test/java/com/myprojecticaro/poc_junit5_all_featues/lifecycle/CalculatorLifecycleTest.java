@@ -34,6 +34,7 @@ class CalculatorLifecycleTest {
     @Test
     @DisplayName("Should sum two numbers")
     void shouldSumTwoNumbers() {
+        System.out.println("shouldSumTwoNumbers");
         int result = calculator.sum(2, 3);
         Assertions.assertEquals(5, result);
     }
@@ -41,6 +42,7 @@ class CalculatorLifecycleTest {
     @Test
     @DisplayName("Should throw exception when dividing by zero")
     void shouldThrowException() {
+        System.out.println("shouldThrowException");
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             calculator.divide(10, 0);
         });
