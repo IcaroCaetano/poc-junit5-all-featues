@@ -14,6 +14,7 @@ class UserServiceParameterizedTest {
     @ParameterizedTest
     @ValueSource(strings = {"abc", "john123", "user01"})
     void shouldAcceptValidUsernames(String username) {
+
         assertTrue(userService.isValidUsername(username));
     }
 
@@ -21,6 +22,7 @@ class UserServiceParameterizedTest {
     @NullAndEmptySource
     @ValueSource(strings = {" ", "  "})
     void shouldRejectInvalidUsernames(String username) {
+
         assertFalse(userService.isValidUsername(username));
     }
 
