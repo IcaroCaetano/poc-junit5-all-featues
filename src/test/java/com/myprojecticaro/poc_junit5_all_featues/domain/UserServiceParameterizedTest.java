@@ -62,4 +62,15 @@ class UserServiceParameterizedTest {
             userService.calculateDiscount(age);
         });
     }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "/users.csv", numLinesToSkip = 1)
+    void shouldLoadUsersFromCsv(String name, int age, String expectedCategory) {
+
+        String category = userService.getUserCategory(age);
+
+        System.out.println("Testing user: " + name + " | Age: " + age);
+
+        assertEquals(expectedCategory, category);
+    }
 }

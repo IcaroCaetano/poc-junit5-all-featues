@@ -1,0 +1,6 @@
+name,age,expectedCategory
+John,15,MINOR
+Anna,25,ADULT
+Mike,59,ADULT
+Elder,60,SENIOR
+Oldman,90,SENIOR
