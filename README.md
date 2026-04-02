@@ -13,7 +13,9 @@ Annotations:
 
 - @ValueSource
 - @NullAndEmptySource
-
+- @CsvSource
+- @CsvFileSource
+- @MethodSource
 
 
 ## 3 - Nested Test
