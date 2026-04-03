@@ -1,4 +1,4 @@
-package com.myprojecticaro.poc_junit5_all_featues.mockito.domain;
+package com.myprojecticaro.poc_junit5_all_featues.mockito.model;
 
 public class User {
 

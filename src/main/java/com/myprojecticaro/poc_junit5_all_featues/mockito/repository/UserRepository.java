@@ -1,6 +1,6 @@
 package com.myprojecticaro.poc_junit5_all_featues.mockito.repository;
 
-import com.myprojecticaro.poc_junit5_all_featues.mockito.domain.User;
+import com.myprojecticaro.poc_junit5_all_featues.mockito.model.User;
 
 import java.util.Optional;
 
