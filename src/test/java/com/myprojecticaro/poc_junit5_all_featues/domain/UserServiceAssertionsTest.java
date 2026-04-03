@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class UserServiceAssertionsTest {
 
-    private final UserService userService = new UserService();
+    private final UserAdminService userService = new UserAdminService();
 
     @Test
     void shouldCreateValidUser() {

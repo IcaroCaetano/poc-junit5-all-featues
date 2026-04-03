@@ -1,32 +1,35 @@
 package com.myprojecticaro.poc_junit5_all_featues.domain;
 
-import com.myprojecticaro.poc_junit5_all_featues.model.User;
-
-import java.util.List;
 
 public class UserService {
 
-    public User createUser(String name, int age) {
-        if (name == null || name.isBlank()) {
-            throw new IllegalArgumentException("Name cannot be empty");
+    public boolean isValidUsername(String username) {
+        if (username == null || username.isBlank()) {
+            return false;
         }
+        return username.length() >= 3 && username.length() <= 10;
+    }
 
+    public int calculateDiscount(int age) {
         if (age < 0) {
             throw new IllegalArgumentException("Invalid age");
         }
 
-        List<String> roles = age >= 18
-                ? List.of("USER")
-                : List.of("USER", "MINOR");
-
-        return new User(name, age, roles);
+        if (age < 18) {
+            return 10;
+        } else if (age >= 60) {
+            return 20;
+        }
+        return 0;
     }
 
-    public void simulateSlowProcess() {
-        try {
-            Thread.sleep(300); // simula processamento
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+    public String getUserCategory(int age) {
+        if (age < 0) {
+            throw new IllegalArgumentException("Invalid age");
         }
+
+        if (age < 18) return "MINOR";
+        if (age < 60) return "ADULT";
+        return "SENIOR";
     }
 }
