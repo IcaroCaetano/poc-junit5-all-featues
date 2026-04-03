@@ -7,7 +7,12 @@ Annotations:
 - @AfterEach
 - @BeforeAll
 - @AfterAll
+- @Test
+- @DisplayName
 - @TestInstance
+- assertEquals
+- assertThrows
+
 
 ## 2 - Parameterized Tests
 
@@ -28,3 +33,13 @@ Annotations:
 - assertDoesNotThrow
 - assertTimeout
 - assertLinesMatch - item by item + regex
+
+## 5 - Mockito
+- @Mock
+- @InjectMocks
+- @ExtendWith
+- verify
+- when
+- thenReturn
+- thenAnswer
+- never
