@@ -1,4 +1,4 @@
-package com.myprojecticaro.poc_junit5_all_featues.domain;
+package com.myprojecticaro.poc_junit5_all_featues.model;
 
 import java.util.List;
 
