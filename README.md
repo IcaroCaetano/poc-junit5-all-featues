@@ -22,9 +22,9 @@ Annotations:
 
 ## 4 - Advanced assertions
 
-- @assertIterableEquals
+- @assertIterableEquals - item by item (exact)
 - assertAll
 - assertThrows
 - assertDoesNotThrow
 - assertTimeout
-- assertLinesMatch
+- assertLinesMatch - item by item + regex
