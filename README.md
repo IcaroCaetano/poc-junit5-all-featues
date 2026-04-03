@@ -19,3 +19,12 @@ Annotations:
 
 
 ## 3 - Nested Test
+
+## 4 - Advanced assertions
+
+- @assertIterableEquals
+- assertAll
+- assertThrows
+- assertDoesNotThrow
+- assertTimeout
+- assertLinesMatch
