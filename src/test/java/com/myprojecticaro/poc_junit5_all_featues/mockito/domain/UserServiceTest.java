@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.*;
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -77,5 +78,24 @@ class UserServiceTest {
         User capturedUser = captor.getValue();
 
         assertEquals(email, capturedUser.getEmail());
+    }
+
+    @Test
+    void shouldCaptureMultipleUsers() {
+
+        List<String> emails = List.of("a@email.com", "b@email.com");
+
+        userService.registerMultiple(emails);
+
+        ArgumentCaptor<User> captor = ArgumentCaptor.forClass(User.class);
+
+        verify(repository, times(2)).save(captor.capture());
+
+        List<User> capturedUsers = captor.getAllValues();
+
+        assertEquals(2, capturedUsers.size());
+
+        assertEquals("a@email.com", capturedUsers.get(0).getEmail());
+        assertEquals("b@email.com", capturedUsers.get(1).getEmail());
     }
 }
