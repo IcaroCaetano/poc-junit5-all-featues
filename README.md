@@ -46,3 +46,5 @@ Annotations:
 - times
 
 ## 6 - Argument Captor
+- captor.getValue()
+- captor.getAllValues()
