@@ -62,4 +62,23 @@ class UserServiceTest {
         verify(repository).findByEmail(email);
         verify(repository, never()).save(any());
     }
+
+    @Test
+    void shouldCaptureSavedUser() {
+
+        String email = "test@email.com";
+
+        when(repository.save(any(User.class)))
+                .thenAnswer(invocation -> invocation.getArgument(0));
+
+        userService.registerUser(email);
+
+        ArgumentCaptor<User> captor = ArgumentCaptor.forClass(User.class);
+
+        verify(repository).save(captor.capture());
+
+        User capturedUser = captor.getValue();
+
+        assertEquals(email, capturedUser.getEmail());
+    }
 }
