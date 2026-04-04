@@ -14,11 +14,9 @@ import static org.mockito.Mockito.*;
 @ExtendWith(org.mockito.junit.jupiter.MockitoExtension.class)
 class UserServiceTest {
 
-    // cria um objeto falso
     @Mock
     private UserRepository repository;
 
-    // cria a classe que sera testada e injeta os mocks nela
     @InjectMocks
     private UserService userService;
 
@@ -31,7 +29,6 @@ class UserServiceTest {
             .thenReturn(Optional.empty());
 
         when(repository.save(any(User.class)))
-                // retorna dinamicamente o que foi passado Ex: "test@email.com"
             .thenAnswer(invocation -> {
                 User user = invocation.getArgument(0);
                 System.out.println("Value: " + user.getEmail());

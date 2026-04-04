@@ -35,11 +35,14 @@ Annotations:
 - assertLinesMatch - item by item + regex
 
 ## 5 - Mockito
-- @Mock
-- @InjectMocks
-- @ExtendWith
+- @Mock - cria um objeto falso
+- @InjectMocks - cria a classe que sera testada e injeta os mocks nela
+- @ExtendWith - adiciona uma funcionalidade a mais ao JUnit
 - verify
 - when
 - thenReturn
-- thenAnswer
+- thenAnswer - retorna dinamicamente o que foi passado Ex: "test@email.com"
 - never
+
+
+## 6 - Argument Captor
