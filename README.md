@@ -50,4 +50,5 @@ Annotations:
 - captor.getAllValues()
 
 # 7 - Advanced Mockito
-- 
+- doThrow
+- doNothing

@@ -98,4 +98,20 @@ class UserServiceTest {
         assertEquals("a@email.com", capturedUsers.get(0).getEmail());
         assertEquals("b@email.com", capturedUsers.get(1).getEmail());
     }
+
+    @Test
+    void shouldThrowExceptionWhenDeleteFails() {
+
+        User user = new User("test@email.com");
+
+        doThrow(new RuntimeException("Database error"))
+                .when(repository)
+                .delete(user);
+
+        assertThrows(RuntimeException.class, () -> {
+            userService.deleteUser(user);
+        });
+
+        verify(repository).delete(user);
+    }
 }
