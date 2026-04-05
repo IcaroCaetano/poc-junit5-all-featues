@@ -29,4 +29,8 @@ public class UserService {
             repository.save(new User(email));
         }
     }
+
+    public void deleteUser(User user) {
+        repository.delete(user);
+    }
 }
