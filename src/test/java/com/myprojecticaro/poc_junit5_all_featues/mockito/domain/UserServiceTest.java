@@ -114,4 +114,18 @@ class UserServiceTest {
 
         verify(repository).delete(user);
     }
+
+    @Test
+    void shouldDeleteUserSuccessfully() {
+
+        User user = new User("test@email.com");
+
+        doNothing()
+                .when(repository)
+                .delete(user);
+
+        userService.deleteUser(user);
+
+        verify(repository).delete(user);
+    }
 }

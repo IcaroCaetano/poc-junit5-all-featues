@@ -52,3 +52,5 @@ Annotations:
 # 7 - Advanced Mockito
 - doThrow
 - doNothing
+
+# 8 - Own Extension
