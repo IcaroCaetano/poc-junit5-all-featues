@@ -54,6 +54,9 @@ Annotations:
 - doNothing
 
 ## 8 - Own Extension
+- BeforeTestExecutionCallback
+- AfterTestExecutionCallback
+- ExtensionContext
 
 ## 9 - Repeated Tests
 - RepetitionInfo
