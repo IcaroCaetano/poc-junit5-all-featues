@@ -56,3 +56,4 @@ Annotations:
 ## 8 - Own Extension
 
 ## 9 - Repeated Tests
+- RepetitionInfo
