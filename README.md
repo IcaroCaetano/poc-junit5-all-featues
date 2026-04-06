@@ -49,8 +49,10 @@ Annotations:
 - captor.getValue()
 - captor.getAllValues()
 
-# 7 - Advanced Mockito
+## 7 - Advanced Mockito
 - doThrow
 - doNothing
 
-# 8 - Own Extension
+## 8 - Own Extension
+
+## 9 - Repeated Tests
