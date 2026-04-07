@@ -68,4 +68,6 @@ mvn test -DexcludedGroups=slow
 ````
 
 ## 11 - Assumptions
-
+- assumeFalse
+- assumeTrue
+- assumingThat
