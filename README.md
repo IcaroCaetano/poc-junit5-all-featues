@@ -62,6 +62,7 @@ Annotations:
 - RepetitionInfo
 
 ## 10 - Tag
+Example how to run: 
 ````
 mvn test -Dgroups=fast
 mvn test -DexcludedGroups=slow
