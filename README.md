@@ -60,3 +60,5 @@ Annotations:
 
 ## 9 - Repeated Tests
 - RepetitionInfo
+
+## 10 - Tag
