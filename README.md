@@ -62,3 +62,10 @@ Annotations:
 - RepetitionInfo
 
 ## 10 - Tag
+````
+mvn test -Dgroups=fast
+mvn test -DexcludedGroups=slow
+````
+
+## 11 - Assumptions
+
