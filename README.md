@@ -72,3 +72,5 @@ mvn test -DexcludedGroups=slow
 - assumeFalse
 - assumeTrue
 - assumingThat
+
+## 12 - TestInstance
